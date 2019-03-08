@@ -1,0 +1,246 @@
+* {
+    box-sizing: border-box;
+}
+
+.backdrop{
+    opacity:0;
+    transition: opacity 0.5s;
+    position:fixed;
+    height: 100vh;
+    width:100vw;
+    background: hsla(0, 0%, 3%, 0.247);
+    top:0;
+    left:0;   
+    display: none;
+    z-index: 22;
+}
+
+.modal{
+    position: fixed;
+    opacity: 0;
+    transform: translateY(-3rem);
+    transition: opacity 0.5s, transform 0.5s;
+    z-index: 200;
+    top:20%;
+    left:30%;
+    width: 40%;
+    background: white;
+    padding: 1rem;
+    border:1px solid rgb(207, 198, 198);
+    box-shadow:1px 1px 1px rgb(85, 78, 78);
+}
+
+.modal__title{
+    text-align: center;
+    margin: 0 0 1rem 0;
+}
+
+.modal__actions{
+    text-align: center;
+}
+
+.modal__action{
+    text-decoration: none;
+    color:white;
+    background: rgb(29, 104, 29);
+    padding:0.5rem 1rem;
+    font-size: 1rem;
+    vertical-align: middle;
+}
+
+.modal__action:hover,
+.modal__action:active{
+    box-shadow: 2px 2px 2px grey;
+}
+
+.modal__action--negative{
+    background:rgb(253, 6, 6);
+    vertical-align: middle;
+}
+
+.modal__action--negative a{
+    color:white;
+    text-decoration: none;
+}
+
+#product-overview {
+  
+    background-image:linear-gradient( to top, rgba(179, 170, 170, 0.445), 10%, transparent), url("freedom.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 33vh;
+    padding: 10px;   
+    margin-top:43px;
+    position: relative;
+    max-width: 100vw;
+}
+
+#product-overview h1{
+    position:absolute;
+    bottom:5%;
+    font-size: 2rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+.section-title {
+    color: #2ddf5c;
+    text-align: center;
+}
+
+#product-overview h1 {
+    color: white;
+    font-family: 'Anton', sans-serif;
+}
+.plan__list{
+    margin:0;
+}
+
+.plan {
+    background: #d5ffdc;
+    text-align: center;
+    padding: 16px;
+    margin: 0 8px;
+    width: 100%;
+    vertical-align: middle;
+}
+
+.plan:hover{
+    box-shadow: 2px 2px 4px seagreen;
+}
+
+.plan--highlighted {
+    background: #19b84c;
+    color: white;
+    
+}
+
+.plan__annotation {
+    background: white;
+    color: #19b84c;
+    padding: 8px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+}
+
+.plan__title {
+    color: #0e4f1f;
+}
+
+.plan__price {
+    color: #858585;
+}
+
+.plan--highlighted .plan__title {
+    color: white;
+}
+
+.plan--highlighted .plan__price {
+    color: #0e4f1f;
+}
+
+.plan__features {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.plan__feature {
+    margin: 8px 0;
+}
+
+#key-features {
+    background: #ff1b68;
+    margin-top: 80px;
+    padding: 16px;
+}
+
+#key-features .section-title {
+    color: white;
+    margin: 1.6rempx;
+}
+
+.key-feature__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.key-feature {
+    width: 100%;
+    margin:auto;
+   
+}
+
+.key-feature__image {
+    background: #ffcede;
+    width: 128px;
+    height: 128px;
+    border: 2px solid #424242;
+    border-radius: 50%;
+    margin: auto;
+    padding: 20px;
+}
+
+.key-feature__description {
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    font-size: 20px;
+}
+
+/* h1 {
+    font-family: sans-serif;
+} */
+
+#main-section{
+    width: 100%;
+    margin:0;
+    text-align:center;
+}
+
+@media (min-width:48rem){
+    #product-overview{
+        height: 55vh;
+    }
+    #main-section{
+        margin:auto;
+    }
+
+    #plans{
+        /* margin:0 5%; */
+      
+    }
+    .plan__list{
+        display: flex;
+        flex-flow: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .plan{
+        display:flex;
+        flex-flow: column;
+        align-items: center;
+        width:30%;
+        height: 26rem;
+        min-width: 13rem;
+        max-width: 20rem;  
+    }
+    #product-overview h1{
+        font-size: 3rem;
+    }
+    .plan--highlighted{
+        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.281);
+        height: 30rem;
+    }
+    .key-feature{
+        width: 30%;
+        max-width: 20rem;
+    }
+
+    .key-feature__list{
+        display: flex;
+    }
+}

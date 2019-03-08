@@ -1,0 +1,40 @@
+
+  
+.parent  {
+    display:grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto ;
+    margin:10px;
+    padding:10px;
+    background: rgb(238, 225, 225);
+    grid-gap: 5px;
+   
+}
+.parent div{
+    text-align: center;
+    padding:1rem;
+    border: 1px solid black;
+    background: grey;
+    
+
+}
+.child-1{
+   grid-column: 1 / 4;
+   
+}
+
+.child-2{
+    grid-row:2 / 4;
+    height: 300px;
+}
+
+.child-3{
+    grid-column: 2 / 4;
+    height: 300px;
+}
+
+.child-4{
+    grid-column: 1 / 4;
+}
+
+
